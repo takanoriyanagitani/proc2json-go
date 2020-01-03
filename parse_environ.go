@@ -4,6 +4,7 @@ import (
 	"bytes"
 )
 
+// Environ2strings is a function to convert null delimited environ bytes.
 func Environ2strings(environ []byte) []string {
 	b := bytes.Split(environ, []byte("\u0000"))
 	l := -1 + len(b)

@@ -4,6 +4,7 @@ import (
 	"bytes"
 )
 
+// Cmdline2strings is a function to convert null delimited cmdline bytes.
 func Cmdline2strings(cmdline []byte) []string {
 	b := bytes.Split(cmdline, []byte("\u0000"))
 	l := -1 + len(b)
