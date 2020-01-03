@@ -5,7 +5,7 @@ import (
 )
 
 type Proc struct {
-  Environ []byte `json:"environ"`
+  Environ []string `json:"environ"`
 }
 
 func Convert(p *Proc) ([]byte, error){
