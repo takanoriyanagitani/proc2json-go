@@ -18,6 +18,7 @@ func TestConvert(t *testing.T) {
 			"proc2json.go",
 		},
 		SessionId: "5",
+		Status:    "Name: vim\nnonvoluntary_ctxt_switches: 42\n",
 	}
 	j, e := Convert(&p)
 	switch e {
@@ -27,7 +28,7 @@ func TestConvert(t *testing.T) {
 		t.Errorf("Marshal error: %v\n", e)
 	}
 	expected := []byte(fmt.Sprintf(
-		`{"environ":["%s","%s","%s"],"cmdline":["%s","%s"],"sessionid":"5"}`,
+		`{"environ":["%s","%s","%s"],"cmdline":["%s","%s"],"sessionid":"5","status":"Name: vim\nnonvoluntary_ctxt_switches: 42\n"}`,
 		"LANG=en_US.UTF-8",
 		"TERM=screen",
 		"SHELL=/bin/bash",

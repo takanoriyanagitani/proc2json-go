@@ -9,6 +9,7 @@ type Proc struct {
 	Environ   []string `json:"environ"`
 	Cmdline   []string `json:"cmdline"`
 	SessionId string   `json:"sessionid"`
+	Status    string   `json:"status"`
 }
 
 // Convert is a function to convert Proc object to json.
