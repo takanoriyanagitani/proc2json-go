@@ -37,9 +37,11 @@ func TestConvert(t *testing.T) {
 		t.Errorf("Unmarshal error: %v\n", em)
 	}
 
-	switch len(a.Environ){
-		case 3: break
-		default: t.Errorf("Unexpected environ count: %v\n", len(a.Environ))
+	switch len(a.Environ) {
+	case 3:
+		break
+	default:
+		t.Errorf("Unexpected environ count: %v\n", len(a.Environ))
 	}
 
 	if "LANG=en_US.UTF-8" != a.Environ[0] {
@@ -54,9 +56,11 @@ func TestConvert(t *testing.T) {
 		t.Errorf("SHELL mismatch.\n")
 	}
 
-	switch len(a.Cmdline){
-		case 2: break
-		default: t.Errorf("cmdline item count mismatch.\n")
+	switch len(a.Cmdline) {
+	case 2:
+		break
+	default:
+		t.Errorf("cmdline item count mismatch.\n")
 	}
 
 	if "vim" != a.Cmdline[0] {
