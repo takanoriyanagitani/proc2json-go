@@ -8,8 +8,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os:     [ ubuntu-16.04, ubuntu-18.04 ]
-        golang: [ 1.11, 1.12, 1.13 ]
+        os:     [ ubuntu-18.04 ]
+        golang: [ 1.13 ]
 
     steps:
     - uses: actions/checkout@v1
