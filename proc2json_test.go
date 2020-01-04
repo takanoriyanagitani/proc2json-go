@@ -116,7 +116,7 @@ func TestConvert_SessionId(t *testing.T) {
 
 func TestConvert_Status(t *testing.T) {
 	p := Proc{
-		Status:    "Name: vim\nnonvoluntary_ctxt_switches: 42\n",
+		Status: "Name: vim\nnonvoluntary_ctxt_switches: 42\n",
 	}
 	j, e := Convert(&p)
 	switch e {
@@ -141,7 +141,7 @@ func TestConvert_Status(t *testing.T) {
 
 func TestConvert_Limits(t *testing.T) {
 	p := Proc{
-		Limits:    "Limit SoftLimit HardLimit Units\nMax cpu time unlimited unlimited seconds\n",
+		Limits: "Limit SoftLimit HardLimit Units\nMax cpu time unlimited unlimited seconds\n",
 	}
 	j, e := Convert(&p)
 	switch e {
